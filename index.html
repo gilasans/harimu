@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Untuk Kamu, Cinta 💖</title>
+  <meta name="description" content="Surprise buat Sayangku yang spesial!">
+  <link rel="icon" type="image/x-icon" href="image/ig.png">
+<meta property="og:title" content="Untuk Kamu, Cinta 💖">
+  <meta property="og:description" content="Surprise buat Sayangku yang spesial!">
+  <meta property="og:image" content="image/ig.png">
+
+  <!-- Icon & Styling -->
+  <link rel="stylesheet" href="https://htmlku.com/harimu/play/style.css" />
+
+  <!-- Script Eksternal -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+</head>
+
+<body>
+
+  <!-- Audio Ulang Tahun -->
+  <audio src="https://feeldreams.github.io/audio/janjisuci.mp3" id="linkmp3" class="sembunyi" autoplay></audio>
+
+  <!-- Background -->
+  <div id="bodyblur">
+    <img src="image/ig.png" id="wallpaper" />
+  </div>
+
+  <div id="Content">
+    <div id="ftAwal">
+      <img src="https://feeldreams.github.io/pandaputih.gif" id="ftoAwal" />
+    </div>
+
+    <div id="loveIn">
+      <a href="#" class='lovein'>
+        <svg class='line' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+          <g transform='translate(2.55, 3.55)'>
+            <path d='M0.37,8.9C-0.7,5.5,0.55,1.38,4.07,0.25C5.92,-0.35,8.2,0.15,9.5,1.94C10.72,0.08,13.07,-0.34,14.92,0.25C18.44,1.38,19.7,5.55,18.63,8.9C16.96,14.2,11.13,16.97,9.5,16.97C7.87,16.97,2.1,14.27,0.37,8.9Z'></path>
+            <path d='M13.24,4.01C14.45,4.14,15.2,5.09,15.16,6.44'></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <p id="ket">Sentuh LOVEnya yaa 😘</p>
+
+    <div class="kumpulanstiker">
+      <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker" />
+      <img src="https://feeldreams.github.io/pandapanah.gif" id="fotostiker1" />
+      <img src="https://feeldreams.github.io/pandaputih.gif" id="fotostikerPopup" />
+      <img src="https://feeldreams.github.io/weee.gif" id="fotostikerPopupCon" />
+      <img src="https://feeldreams.github.io/ngumpet.gif" id="fotostikerPopupCan" />
+    </div>
+
+    <div>
+      <div id='pergeseran'>
+        <p><b><img src="image/kerudungPing.png" /><br><span>Hai Cintaku 😍</span></b></p>
+        <p><b><img src="image/love.png" /><br><span>Ada yang spesial hari ini yaa 😚</span></b></p>
+        <p><b><img src="image/IMG-20240106-WA0032.jpg" /><br><span>Ciyeee ulang tahun nih 💐</span></b></p>
+        <p><b><img src="image/IMG-20240106-WA0028.jpg" /><br><span class="ft">Selamat Ulang Tahun, Sayangku! 🥳</span></b></p>
+        <p><b><img src="image/Screenshot 2025-06-07 125423.png" /><br><span>Semoga makin sayang aku ya 😘</span></b></p>
+      </div>
+    </div>
+
+    <div>
+      <blockquote id='bq'>
+        <p id="teksnim">Hari Spesialmu 💖</p>
+        <p id="kalimat">
+          <span id="klganti"><b>Maaf kadonya nyusul ya wkwk 🤣</b><br><br></span>
+          Tapi serius, aku beneran doain semoga<br>
+          kamu bahagia selalu, makin sehat, makin kuat,<br>
+          dan makin cinta sama akuuu! 💘<br><br>
+          <span class="ft">Love you more each day 🥰</span>
+        </p>
+      </blockquote>
+    </div>
+
+    <div id="Tombol">
+      <a onClick="multifungsi()"><b id="tmbl">Geser Yuk 💌</b></a>
+    </div>
+  </div>
+
+  <script src="https://htmlku.com/harimu/play/script.js"></script>
+  <script>
+  // ✅ Audio diputar 2 atau 3 kali
+  let playCount = 0;
+  const maxPlays = 3;
+  if (typeof audio !== "undefined") {
+    audio.addEventListener('ended', () => {
+      playCount++;
+      if (playCount < maxPlays) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    });
+  }
+
+  function bqmuncul() {
+    if (poinjwb == 1) {
+      katakata = kalimat.innerHTML; kalimat.innerHTML = "";
+    } else {
+      klganti.innerHTML = "Udah segitu aja deh, nanti nangis 😅<br><br>";
+      katakata = kalimat.innerHTML; kalimat.innerHTML = "";
+    }
+    Content.style = "opacity:1;margin-top:7vh";
+    fotostiker.style = "display:none";
+    pergeseran.style = "display:none";
+    Tombol.style = "";
+    bq.style = "position:relative;opacity:1;visibility:visible;margin-top:20px;transform: scale(1);";
+    setTimeout(kalimatakhir, 200);
+    ftganti = 0; fthilang();
+  }
+
+  tompositif = "Mauu";
+  tomnegatif = "Gamauu";
+
+  async function aksibalas() {
+    var { isConfirmed: prtanya } = await swals.fire({
+      title: 'Mau Kado Gak Nih? 🤭',
+      imageUrl: '' + fotostikerPopup.src,
+      showCancelButton: true,
+      confirmButtonText: tompositif,
+      cancelButtonText: tomnegatif,
+      cancelButtonColor: '#FF0000',
+    });
+
+    if (prtanya) {
+      await swalst.fire({
+        title: 'Yee dapet kado! Eh... 🤣',
+        html: 'Bercanda doang wkwkw 😜',
+        imageUrl: '' + fotostikerPopupCon.src,
+      });
+      poinjwb = 1;
+    } else {
+      await swals.fire({
+        title: 'Hmmm 😢',
+        html: 'Padahal udah siapin sesuatu nih 🥺',
+        imageUrl: '' + fotostikerPopupCan.src,
+      });
+      poinjwb = 2;
+    }
+
+    bqmuncul();
+  }
+</script>
+
+</body>
+</html>
